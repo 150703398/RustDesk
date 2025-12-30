@@ -1,6 +1,5 @@
 FROM rustdesk/rustdesk-server:latest
 
-# 安装 cloudflared
 RUN apk add --no-cache curl && \
     curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 \
     -o /usr/local/bin/cloudflared && \
