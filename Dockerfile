@@ -5,7 +5,5 @@ RUN apk add --no-cache curl && \
     -o /usr/local/bin/cloudflared && \
     chmod +x /usr/local/bin/cloudflared
 
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
