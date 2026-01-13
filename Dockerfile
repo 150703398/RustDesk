@@ -15,11 +15,7 @@ RUN apt-get update && \
 ############################
 FROM rustdesk/rustdesk-server:latest
 
-# 拷贝 cloudflared（二进制即可）
 COPY --from=cf /cloudflared /usr/local/bin/cloudflared
-
-# 启动脚本
 COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
