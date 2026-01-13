@@ -18,4 +18,5 @@ FROM rustdesk/rustdesk-server:latest
 COPY --from=cf /cloudflared /usr/local/bin/cloudflared
 COPY entrypoint.sh /entrypoint.sh
 
+# ⭐关键：用 sh 执行
 ENTRYPOINT ["sh", "/entrypoint.sh"]
