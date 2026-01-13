@@ -1,0 +1,18 @@
+name: rustdesk-argo
+services:
+  - name: rustdesk
+    type: web
+    dockerfile: Dockerfile
+
+    env:
+      - name: CF_TUNNEL_TOKEN
+        value: cloudflared.exe service install eyJhIjoiMTcxNjEzYjZkNTdjZTY2YzdhMWQ2OGQzMGEyMDBlYTYiLCJ0IjoiYjNkMzBkODMtYTNhYS00ZThhLTgxM2UtYTIwNDE4NmYwMTk4IiwicyI6Ik1UaGhNelEwTXprdE1Ea3lOUzAwWkdGakxXRmpZelF0TnpkbVl6QTNOamxpWmpVMiJ9
+      - name: ALWAYS_USE_RELAY
+        value: "Y"
+
+    regions:
+      - fra
+      - was
+
+    instance:
+      type: nano
