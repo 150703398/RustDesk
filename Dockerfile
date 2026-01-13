@@ -18,4 +18,4 @@ FROM rustdesk/rustdesk-server:latest
 COPY --from=cf /cloudflared /usr/local/bin/cloudflared
 COPY entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["sh", "/entrypoint.sh"]
