@@ -31,4 +31,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: 150703398@qq.com/rustdesk:latest
+          tags: 150703398/rustdesk:latest
